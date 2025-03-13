@@ -13,11 +13,9 @@ interface PricingPlanComponent {
 export default function PricingCard({ item, cardTheme }: PricingPlanComponent) {
     const navigate = useNavigate();
 
-
     function handleTryButton() {
         navigate("/signup?tier=" + item.tier);
     }
-
 
     return (
         <motion.section
@@ -25,9 +23,9 @@ export default function PricingCard({ item, cardTheme }: PricingPlanComponent) {
             variants={ cardVariants }
         >
             <div className="pricing-card__top-half">
-                <h2 className="pricing-card__tier">
+                <div className="pricing-card__tier">
                     { item.tier } <p className="sr-only">Tier</p>
-                </h2>
+                </div>
 
                 <div className="pricing-card__membership">
                     <span className="sr-only">{ item.price === 0 ? "For Free" : `For $${ item.price }` }</span>
