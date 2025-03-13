@@ -1,0 +1,39 @@
+.signup-hero {
+  display: grid;
+  justify-items: center;
+  gap: 3.5rem;
+
+  @include breakpoint(medium) {
+    grid-area: 1/1;
+    grid-template-rows: max-content max-content;
+    justify-items: flex-start;
+  }
+
+  &__text {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+  }
+
+  &__header,
+  &__body-text {
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+  }
+
+  &__header {
+    width: 80%;
+    color: $clr-black;
+
+    @include breakpoint(medium) {
+      width: 100%;
+    }
+  }
+
+  &__body-text {
+    color: $clr-grey-600;
+  }
+}

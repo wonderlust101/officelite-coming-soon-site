@@ -1,0 +1,19 @@
+.header {
+  grid-area: 1/2;
+  margin: 3rem 0 5rem;
+  justify-self: center;
+  z-index: 2;
+
+  @include breakpoint(small) {
+    margin: 4.5rem 0 6.5rem;
+    justify-self: start;
+  }
+
+  &__logo {
+    width: 10rem;
+
+    @include breakpoint(medium) {
+      width: 12rem;
+    }
+  }
+}

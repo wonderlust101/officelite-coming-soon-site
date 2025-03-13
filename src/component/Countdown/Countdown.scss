@@ -1,0 +1,96 @@
+.countdown {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+
+  @include breakpoint(small) {
+    width: 32rem;
+  }
+
+  @include breakpoint(medium) {
+    gap: 0.5rem;
+  }
+
+  &__title {
+    font-size: 1rem;
+    line-height: 3rem;
+    letter-spacing: 0.3125rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+  }
+
+  &__date {
+    color: $clr-primary-500
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+
+    &--light {
+      & .countdown__unit-container {
+        color: $clr-primary-500;
+        background-color: $clr-primary-500-10;
+      }
+
+      & .countdown__value {
+        color: $clr-primary-500;
+      }
+
+      & .countdown__time {
+        color: $clr-grey-900;
+        opacity: 0.5;
+      }
+    }
+
+    &--dark {
+      & .countdown__unit-container {
+        color: $clr-white;
+        background-color: $clr-grey-900;
+      }
+
+      & .countdown__value {
+        color: $clr-white;
+      }
+
+      & .countdown__time {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__unit-container {
+    display: grid;
+    justify-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+
+    @include breakpoint(small) {
+      padding: 1.25rem;
+      border-radius: 0.8125rem;
+    }
+  }
+
+  &__value {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+    font-variant-numeric: tabular-nums;
+
+    @include breakpoint(small) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__time {
+    font-weight: 700;
+    line-height: 1.75rem;
+  }
+}

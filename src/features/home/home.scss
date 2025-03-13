@@ -1,0 +1,25 @@
+.home {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  min-height: 100vh;
+  background: url('/images/home/bg-pattern-header.svg') center -10rem no-repeat $clr-off-white;
+  background-size: 100%;
+  overflow: hidden;
+
+  @include breakpoint(small) {
+    background: url('/images/home/bg-pattern-header.svg') top -16rem right -20rem no-repeat $clr-off-white;
+    background-size: 75%;
+  }
+
+  @include breakpoint(medium) {
+    background: url('/images/home/bg-pattern-header.svg') top -24rem right -24rem no-repeat $clr-off-white;
+    background-size: 80%;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 6.25rem;
+    z-index: 1;
+  }
+}

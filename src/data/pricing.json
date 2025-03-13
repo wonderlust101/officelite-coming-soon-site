@@ -1,0 +1,32 @@
+[
+  {
+    "tier": "Basic",
+    "price": 0.00,
+    "storageSize": 2,
+    "features": [
+      "Basic document collaboration",
+      "Great security and support"
+    ],
+    "cardTheme": "light"
+  },
+  {
+    "tier": "Pro",
+    "price": 9.99,
+    "storageSize": 50,
+    "features": [
+      "Basic document collaboration",
+      "Great security and support"
+    ],
+    "cardTheme": "dark"
+  },
+  {
+    "tier": "Ultimate",
+    "price": 19.99,
+    "storageSize": 100,
+    "features": [
+      "Basic document collaboration",
+      "Great security and support"
+    ],
+    "cardTheme": "light"
+  }
+]

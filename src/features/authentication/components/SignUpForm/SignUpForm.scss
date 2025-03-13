@@ -1,0 +1,36 @@
+.sign-up-form {
+  display: grid;
+  align-items: flex-start;
+  padding: 1.5rem;
+  width: 100%;
+  height: max-content;
+  background-color: $clr-white;
+  border-radius: 1rem;
+  box-shadow: 0 50px 50px -25px $clr-grey-900-15;
+
+  @include breakpoint(small) {
+    width: min(100%, 32rem);
+    padding: 3rem;
+    justify-self: center;
+  }
+
+  &__inputs {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__option {
+    display: flex;
+    gap: 0.5rem;
+
+    &--bold {
+      font-weight: 700;
+    }
+
+    &--grey {
+      font-weight: 700;
+      color: $clr-black;
+      opacity: 0.4;
+    }
+  }
+}

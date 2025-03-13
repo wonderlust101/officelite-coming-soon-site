@@ -1,0 +1,54 @@
+.signup {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  min-height: 100vh;
+  background: url('/images/home/bg-pattern-header.svg') center -10rem no-repeat $clr-off-white;
+  background-size: contain;
+
+  @include breakpoint(small) {
+    background: $clr-off-white;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    justify-items: center;
+    row-gap: 4rem;
+    z-index: 1;
+
+    @include breakpoint(medium) {
+      grid-area: 1/2 / 3/3 !important;
+      grid-template: 1fr / 1fr 1fr;
+      align-items: center;
+      column-gap: 8rem;
+    }
+
+    & > * {
+      width: 100%;
+    }
+  }
+
+  &__footer {
+    grid-column: 1/-1 !important;
+    height: 24rem;
+    margin-top: -18rem;
+    width: 100%;
+    background: url('/images/sign-up/bg-pattern-side.svg') center no-repeat $clr-black;
+    background-size: 100%;
+
+    @include breakpoint(medium) {
+      right: 0;
+      top: 0;
+      margin-top: unset;
+      position: absolute;
+      height: 100%;
+      width: 30%;
+      background: url('/images/sign-up/bg-pattern-side.svg') center top -40rem no-repeat $clr-black;
+      background-size: 400%;
+    }
+
+    @include breakpoint(x-large) {
+      width: 35%;
+    }
+  }
+}

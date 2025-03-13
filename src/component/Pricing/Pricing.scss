@@ -1,0 +1,8 @@
+.pricing {
+  display: grid;
+  gap: 2rem;
+
+  @include breakpoint(medium) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

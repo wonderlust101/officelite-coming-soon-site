@@ -1,0 +1,52 @@
+.text-input {
+  display: grid;
+  width: 100%;
+  position: relative;
+
+  &__input {
+    all: unset;
+    color: $clr-black;
+    border-bottom: 1px solid $clr-grey-600-05;
+    padding: 1rem;
+
+    &:focus {
+      border-bottom: 1px solid $clr-primary-500;
+    }
+
+    &::placeholder {
+      color: $clr-grey-600;
+      opacity: 0.5;
+    }
+
+    &--error {
+      color: #F05B5B;
+      border-bottom: 1px solid $clr-errors;
+
+      &:focus {
+        border-bottom: 1px solid $clr-errors !important;
+      }
+
+      &::placeholder {
+        color: $clr-errors;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__error-icon {
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

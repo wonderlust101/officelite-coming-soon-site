@@ -1,0 +1,52 @@
+.home-hero {
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+  gap: 4rem;
+
+  @include breakpoint(small) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  &__image {
+    max-width: 12rem;
+
+    @include breakpoint(small) {
+      grid-area: 1/2;
+      max-width: 24rem;
+    }
+
+    @include breakpoint(medium) {
+      max-width: unset;
+      width: 100%;
+    }
+  }
+
+  &__body {
+    display: grid;
+    justify-items: center;
+    gap: 1.5rem;
+
+    @include breakpoint(small) {
+      justify-items: flex-start;
+    }
+  }
+
+  &__header,
+  &__body-text {
+    text-align: center;
+
+    @include breakpoint(small) {
+      text-align: left;
+    }
+  }
+
+  &__header {
+    color: $clr-black;
+  }
+
+  &__body-text {
+    color: $clr-grey-600;
+  }
+}
