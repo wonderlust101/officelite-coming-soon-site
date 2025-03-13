@@ -15,6 +15,7 @@ export default function HomeHero() {
         >
             <motion.img
                 className="home-hero__image"
+                alt=""
                 variants={ itemVariants }
                 src={ homeHeroImage }
                 aria-hidden={true}
