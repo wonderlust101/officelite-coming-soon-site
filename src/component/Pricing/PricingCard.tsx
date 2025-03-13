@@ -23,9 +23,9 @@ export default function PricingCard({ item, cardTheme }: PricingPlanComponent) {
             variants={ cardVariants }
         >
             <div className="pricing-card__top-half">
-                <div className="pricing-card__tier">
-                    { item.tier } <p className="sr-only">Tier</p>
-                </div>
+                <h2 className="pricing-card__tier">
+                    { item.tier } <span className="sr-only">Tier</span>
+                </h2>
 
                 <div className="pricing-card__membership">
                     <span className="sr-only">{ item.price === 0 ? "For Free" : `For $${ item.price }` }</span>
